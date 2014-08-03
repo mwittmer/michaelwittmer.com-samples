@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Test Page</title>
+	<style type="text/css">
+	@charset "utf-8";
+	/* General Styles */
+	.content p {
+		margin-top: 80px;
+		font-family:Arial, Helvetica, sans-serif;
+		color:#222;
+	}
+	h2 {
+		font-style: normal;
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+		color:#555;
+	}
+	#banner{
+		text-align:right;
+	}
+/* Clear-Fix hack from http://nicolasgallagher.com/micro-clearfix-hack/ */
+			/**
+			.cf:before,
+			.cf:after {
+				content: " "; /* 1 */
+				display: table; /* 2 */
+	}
+	.cf:after {
+		clear: both;
+	}
+	/**
+			 * For IE 6/7 only
+			 * Include this rule to trigger hasLayout and contain floats.
+			 */
+	.cf {
+	 *zoom: 1;
+	}
+	/* horizontal menu styles */
+	nav#HorizontalMenu {
+		background-color:#F60;
+		height:2.3em;	
+		}
+	nav#HorizontalMenu ul {
+		background-color: orange;
+		height: 2em;
+		width: 100%;
+	}
+	nav#HorizontalMenu ul,  
+	nav#HorizontalMenu li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		float: left;
+	}
+	nav#HorizontalMenu li:first-child {
+	}
+	nav#HorizontalMenu li:last-child {
+	}
+	nav#HorizontalMenu li {
+		/*width:150px;*/
+		/*text-align: left;*/
+		display: block;
+	}
+	nav#HorizontalMenu li a {
+		display: block;
+		line-height:2.3em;
+		background-color: ORANGE;
+		padding:0 1em;
+		color: white;		
+		text-decoration: none;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: .8em;
+		
+	}
+	nav#HorizontalMenu li a:hover {
+		background-color: #F60;
+		height:2.5em;
+		padding-top:.3em;
+		position:relative;
+		top:-.3em;
+		border-radius:.3em .3em 0 0;
+		
+	}
+	nav#HorizontalMenu li a.current{
+		background-color:#AE9C7F;
+		color:#eee;
+		height:2.5em;
+		padding-top:.3em;
+		position:relative;
+		top:-.3em;
+		border-radius:.3em .3em 0 0;
+		border-bottom:.4em solid #8E7C5F;
+		cursor:default;
+	}
+	
+	body div.content {
+		clear: both;
+	}
+	
+</style>
+</head>
+<body>
+    <h2 id="banner">Horizontal Menu Sample</h2>
+    <nav class="cf" id="HorizontalMenu">
+        <ul>
+            <li><a href="HorizontalMenu.html" title="Home" class="current">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+    	<p>Place page contents here...</p>
+	</div>
+</body>
+</html>

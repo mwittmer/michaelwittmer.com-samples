@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submenu example</title>
+<style>
+html {
+	background: white;
+}
+body {
+	font: 100% Georgia, "Times New Roman", Times, serif;
+	line-height: 1.4;
+	width: 70%;
+	margin: 0 auto;
+}
+h1, h2, h3 {
+	font-size: 2.4em;
+	font-weight: normal;
+	color: #555;
+}
+h2 {
+	font-size: 1.4em;
+}
+/*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+/*horizontal menu goodies*/	
+nav {
+	background: #F60;
+	height: 2.3em;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+ul {
+	background: ORANGE;
+	height: 2em;
+	width: 100%;
+}
+li{
+	position:relative;
+}
+li a {
+	font-family:Arial, Helvetica, sans-serif;
+	display: block;
+	line-height: 2em;
+	padding: 0 1em;
+	color: white;
+	text-decoration: none;
+}
+li a:hover, .topmenu > li:hover > a {
+	background: #F60;
+	height: 2em;
+	padding-top: .3em;
+	position: relative;
+	top: -.3em;
+	border-radius: .3em .3em 0 0;
+}
+.current, a:hover.current, .topmenu li:hover a.current {
+	background: #AD9B7F;
+	color: #eee;
+	padding-top: .3em;
+	border-radius: .3em .3em 0 0;
+	position: relative;
+	top: -.3em;
+	border-bottom: .3em solid #917F63;
+	cursor: default;
+}
+/* Submenu goodies */
+ul.submenu{
+	float:none;
+	background:#F60;
+	width:auto;
+	height:auto;
+	position:absolute;
+	top:2em;
+	left:-3000em;
+}
+.topmenu li:hover ul{
+	left:0;
+}
+ul.submenu li{
+	float:none;
+}
+ul.submenu li a{
+	border-bottom:1px solid white;
+	padding: .2em 1em;
+	white-space:nowrap;
+}
+ul.submenu li:last-child a{
+	border-bottom:none;
+}
+ul.submenu li a:hover {
+	background: ORANGE;
+	height: 2em;
+	padding-top:.2em;
+	top:0;
+	border-radius:0 0 0 0;
+}
+</style>
+</head>
+<body>
+<p></p>
+<nav class="cf">
+<ul class="topmenu">
+  <li><a href="submenu_example.htm" title="Home page" class="current">Home</a></li>
+  <li><a href="products.htm" title="our products">Products</a>
+  	<ul class="submenu">
+        <li><a href="item1.htm" title="item 1">Item 1</a></li>
+        <li><a href="item2.htm" title="item 2">Item 2</a></li>
+        <li><a href="item3.htm" title="item 3">Item 3</a></li>
+        <li><a href="item4.htm" title="item 4">Item 4</a></li>
+    </ul>
+  </li>
+  <li><a href="blog.htm" title="current blog entries">Blog</a></li>
+  <li><a href="about.htm" title="about us">About</a></li>
+  <li><a href="contact.htm" title="contact info">Contact</a>
+  	<ul class="submenu">
+        <li><a href="item5.htm" title="item 5">Item 5</a></li>
+        <li><a href="item6.htm" title="item 6">Item 6</a></li>
+    </ul>
+  </li>
+</ul>
+</nav>
+
+<h1>Submenu Example Page</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p> 
+<p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+
+</body>
+</html>

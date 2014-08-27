@@ -1,0 +1,71 @@
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
+void setup()
+{
+ lcd.init();                      // initialize the lcd 
+ lcd.noBacklight();
+ }
+void loop()
+{
+ lcd.setCursor(0,0);
+ lcd.print("16x2 LCD Screen");
+ lcd.setCursor(0,1);
+ lcd.print("Diagnostic Test");
+ lcd.backlight();
+  
+  delay(3000);
+
+lcd.clear();  // clear the display
+delay(250);
+lcd.home();  // set the curror at position zero - has a 2 second delay
+delay(250);
+lcd.cursor(); //turn the cursor on
+delay(400);
+lcd.setCursor(7,0);  //set the cursor position (col,row)
+delay(400);
+lcd.blink();  //make the cursor blink
+delay(4000);
+lcd.noBlink(); //turn off the blink feature
+delay(400);
+lcd.noCursor();  //turn the cursor off
+delay(200);
+
+
+
+  
+  lcd.setCursor(0,0);
+  lcd.print("ABCDEFGHIJKLMNO !@#$%^&*()_+-={}");
+  lcd.setCursor(0,1);
+  lcd.print("PQRSTUFWXYZ0123 []|:;<>,.?/`~   ");
+  delay(500);
+  
+  int i;
+  for(i=0; i<16; i++){
+     lcd.scrollDisplayLeft();
+     delay(100);
+  }
+  delay(300);
+  
+  //change the text while off-screen
+   lcd.setCursor(0,0);
+   lcd.print("abcdefghijklmno");
+   lcd.setCursor(0,1);
+   lcd.print("pqrstuvwxyz0123" );
+
+  //scroll to the right  
+  for(i=0; i<16; i++){
+     lcd.scrollDisplayRight();
+     delay(100);
+  }
+  delay(1000);
+  
+ for(i=0; i<6; i++){
+   lcd.noBacklight();
+   delay(100);
+   lcd.backlight();
+   delay(100);
+ } 
+   lcd.noBacklight();
+   delay(1000);  
+ }
